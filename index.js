@@ -10,6 +10,7 @@ app.get('/*', (req, res) => {
   res.send(`
     Hi! The wildcard route was matched.
     value was obtained environment: ${process.env.MY_ENV_VARIABLE}.
+    The original url: ${req.originalUrl}.
   `)
 })
 
