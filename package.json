@@ -1,0 +1,16 @@
+{
+  "name": "iis-express-default",
+  "version": "0.0.1",
+  "description": "Express app with default IIS Node settings",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.0"
+  }
+}
