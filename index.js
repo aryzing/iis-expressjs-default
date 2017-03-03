@@ -7,10 +7,25 @@ app.get('/', (req, res) => {
 
 app.get('/*', (req, res) => {
   console.log('Wildcard route matched')
+  res.set('Content-Type', 'text/html');
   res.send(`
-    Hi! The wildcard route was matched.
-    value was obtained environment: ${process.env.MY_ENV_VARIABLE}.
-    The original url: ${req.originalUrl}.
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+      </head>
+      <body>
+        <h1>Test IIS Node server</h1>
+        <h3>Hi team, soon the CFA will be here!</h3>
+        <h2>Debug info</h2>
+        <pre>
+          The wildcard route was matched.
+          value was obtained environment: ${process.env.MY_ENV_VARIABLE}.
+          The original url: ${req.originalUrl}.
+        </pre>
+      </body>
+    </html>
   `)
 })
 
