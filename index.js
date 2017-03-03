@@ -7,7 +7,10 @@ app.get('/', (req, res) => {
 
 app.get('/*', (req, res) => {
   console.log('Wildcard route matched')
-  res.send('Hi! The wildcard route was matched')
+  res.send(`
+    Hi! The wildcard route was matched.
+    value was obtained environment: ${process.env.MY_ENV_VARIABLE}.
+  `)
 })
 
 var port = process.env.PORT || 6121
